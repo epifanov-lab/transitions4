@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FA9292">
+
+  <com.example.transition4.ItemView
+    android:id="@+id/texture_container"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_centerInParent="true"
+    android:foreground="@drawable/all_ripple_fg"
+    android:padding="32dp"
+    android:transitionName="texture_container">
+
+    <com.webka.sdk.players.view.PlayerTextureView
+      android:id="@+id/texture"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  </com.example.transition4.ItemView>
+
+  <View
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorAccent"
+    android:transitionName="toolbar" />
+
+</RelativeLayout>

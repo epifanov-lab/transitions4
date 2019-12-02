@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.transition4.ItemView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/texture_container"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FAF092"
+  android:foreground="@drawable/all_ripple_fg"
+  android:transitionName="texture_container">
+
+  <com.webka.sdk.players.view.PlayerTextureView
+    android:id="@+id/texture"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="32dp" />
+
+  <View
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:background="@color/colorAccent"
+    android:transitionName="toolbar" />
+
+</com.example.transition4.ItemView>

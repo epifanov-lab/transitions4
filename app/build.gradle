@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.transition4"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+
+    //api 'androidx.multidex:multidex:' + project.properties['version.multidex']
+    api 'androidx.paging:paging-runtime:' + project.properties['version.paging']
+    api 'androidx.browser:browser:1.0.0'
+
+    api 'io.projectreactor:reactor-core:' + project.properties['version.reactor.core']
+
+    api 'com.squareup.okhttp3:okhttp:' + project.properties['version.okhttp']
+    api 'com.squareup.okhttp3:logging-interceptor:' + project.properties['version.okhttp']
+    api 'com.squareup.okhttp3:okhttp-urlconnection:' + project.properties['version.okhttp']
+
+    api 'com.github.bumptech.glide:glide:' + project.properties['version.glide']
+    api 'com.github.bumptech.glide:annotations:' + project.properties['version.glide']
+
+    annotationProcessor 'com.google.dagger:dagger-compiler:' + project.properties['version.dagger']
+    api 'com.google.dagger:dagger:' + project.properties['version.dagger']
+    api 'com.google.android.material:material:' + project.properties['version.material']
+    //api 'com.google.firebase:firebase-core:' + project.properties['version.firebase.core']
+
+    api 'com.google.android.gms:play-services-auth:'+ project.properties['version.play.services.auth']
+    api 'com.google.android.exoplayer:exoplayer-core:' + project.properties['version.exoplayer']
+    api 'com.google.android.exoplayer:exoplayer-hls:'+ project.properties['version.exoplayer']
+
+    api 'org.webrtc:google-webrtc:' + project.properties['version.webrtc']
+
+    api "webka:client:0.0.1"
+    api "webka:internals:0.0.1"
+}
